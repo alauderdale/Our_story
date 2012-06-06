@@ -1,7 +1,273 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit;}
 
-body{
-  font-weight: 300;
-  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+/*fonts*/
+
+@font-face {
+    font-family: 'PragmaticaCondBold';
+    src: url('../fonts/pragmaticacondbold-reg-webfont.eot');
+    src: url('../fonts/pragmaticacondbold-reg-webfont.eot?#iefix') format('fonts/embedded-opentype'),
+         url('../fonts/pragmaticacondbold-reg-webfont.woff') format('woff'),
+         url('../fonts/pragmaticacondbold-reg-webfont.ttf') format('truetype'),
+         url('../fonts/pragmaticacondbold-reg-webfont.svg#PragmaticaCondBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'MuseoSans500Regular';
+    src: url('../fonts/museosans_500-webfont.eot');
+    src: url('../fonts/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosans_500-webfont.woff') format('woff'),
+         url('../fonts/museosans_500-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_500-webfont.svg#MuseoSans500Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoSans700Regular';
+    src: url('../fonts/museosans_700-webfont.eot');
+    src: url('../fonts/museosans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosans_700-webfont.woff') format('woff'),
+         url('../fonts/museosans_700-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_700-webfont.svg#MuseoSans700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'MuseoSans300Regular';
+    src: url('../fonts/museosans-300-webfont.eot');
+    src: url('../fonts/museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museosans-300-webfont.woff') format('woff'),
+         url('../fonts/museosans-300-webfont.ttf') format('truetype'),
+         url('../fonts/museosans-300-webfont.svg#MuseoSans300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FleurCornerCapsRegular';
+    src: url('../fonts/fleurcornercaps-webfont.eot');
+    src: url('../fonts/fleurcornercaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fleurcornercaps-webfont.woff') format('woff'),
+         url('../fonts/fleurcornercaps-webfont.ttf') format('truetype'),
+         url('../fonts/fleurcornercaps-webfont.svg#FleurCornerCapsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+
+  font-family: 'MuseoSans300Regular';
+}
+
+/*header*/
+
+header{
+  width: 640px;
+  margin: 0 auto;
+  padding: 30px;
+  background-image: url(../images/book_bg.png);
+}
+
+header h1{
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'PragmaticaCondBold';
+  text-shadow: 0 2px 0 #000;
+  margin-bottom: 30px;
+}
+
+/*avatars*/
+
+.avatars{
+  display: inline-block;
+  margin-left: 140px;
+}
+
+.avatar{
+  width: 164px;
+  height: 164px;
+  float: left;
+}
+
+.avatar:first-of-type{
+  margin-right: 30px;
+}
+
+.avatar img{
+  position: relative;
+  left: 15px;
+  top: 13px;
+  width: 136px;
+  height: 136px;
+}
+
+.user-avatar{
+  background-image: url(../images/user_frame.png);
+}
+.partner-avatar{
+  background-image: url(../images/partner_frame.png);
+}
+
+
+/*story main*/
+
+#container{
+  width: 640px;
+  margin: 0 auto;
+  padding: 30px;
+  background-image: url(../images/bg.png);
+}
+
+
+/*global story item*/
+
+
+.story_item{
+  background-color: #fff;
+  margin: 40px 0;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,.3);
+}
+
+.content{
+  padding: 20px;
+}
+
+/*fill in the blank*/
+
+/*date*/
+
+.fitb .date{
+  width: 96px;
+  background-repeat: no-repeat;
+  font-family: 'MuseoSans700Regular';
+  padding: 44px 0 0 18px;
+  position: relative;
+  top: -44px;
+  left: -3px;
+  float: left;
+  z-index: 1;
+  margin-right: -114px;
+  color: rgba(0,0,0,.5);
+  text-shadow: 0 1px 0 rgba(255,255,255,.3);
+}
+
+.partnerfitb .date{
+  background-image: url(../images/partner_pin.png);
+    -webkit-transform:rotate(-10deg);
+}
+
+.userfitb .date{
+  background-image: url(../images/user_pin.png);
+    -webkit-transform:rotate(10deg);
+}
+
+
+.fitb .month{
+  font-size: 18pt;
+  text-transform: uppercase;
+}
+
+.fitb .day{
+  font-size: 38pt;
+  position: relative;
+  top: -11px;
+}
+
+/*content*/
+
+
+.fitb .content h2{
+  font-family: 'MuseoSans700Regular';
+  font-size: 24pt;
+  text-indent: 66px;
+  margin-bottom: 15px;
+}
+
+.fitb .content p{
+  font-size: 20pt;
+}
+
+.fitb .content p:before, .fitb .content p:after{
+  content: '"';
+}
+
+
+
+/*tell us your story*/
+
+
+/*date*/
+
+
+.story .date{
+  width: 78px;
+  height: 110px;
+  background-repeat: no-repeat;
+  font-family: 'MuseoSans700Regular';
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+  text-shadow: 0 2px 0 rgba(0,0,0,.4);
+  float: right;
+  position: relative;
+  top: -19px;
+  left: -5px;
+  margin-left: -10px;
+}
+
+.story .month{
+  font-size: 17pt;
+  text-transform: uppercase;
+}
+
+.story .day{
+  font-size: 27pt;
+  position: relative;
+  top: -5px;
+}
+
+.userstory .date{
+  background-image: url(../images/user_rib.png);
+}
+
+.partnerstory .date{
+  background-image: url(../images/partner_rib.png);
+}
+
+/*content*/
+
+.story .content{
+  background-color: #f4f3f1;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,.2);
+}
+
+.story .content:first-letter{
+  font-family: 'FleurCornerCapsRegular';
+  text-transform: uppercase;
+  font-size: 80pt;
+  float: left;
+  margin-right: 5px;
+}
+
+.userstory .content:first-letter{
+  color: #6e7a3f;
+}
+
+.partnerstory .content:first-letter{
+  color: #628696;
+}
+
+.story p{
+  font-size: 20pt;
+}
